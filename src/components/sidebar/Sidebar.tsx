@@ -1,30 +1,37 @@
-import "./Sidebar.scss";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from "@mui/icons-material/Add";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import "./Sidebar.scss";
+import SidebarChannel from "./SidebarChannel";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="sidebar-left">
-        <div className="server-icon">
+      <div className="sidebarLeft">
+        <div className="serverIcon">
           <img src="./logo192.png" alt="" />
         </div>
-        <div className="server-icon">
+        <div className="serverIcon">
           <img src="./logo512.png" alt="" />
         </div>
       </div>
-      <div className="sidebar-right">
-        <div className="sidebar-top">
+      <div className="sidebarRight">
+        <div className="sidebarTop">
           <h3>Discord</h3>
           <ExpandMoreIcon />
         </div>
-        <div className="sidebar-channels">
-          <div className="sidebar-channels-header">
-            <div className="sidebar-header">
+        <div className="sidebarChannels">
+          <div className="sidebarChannelsHeader">
+            <div className="sidebarHeader">
               <ExpandMoreIcon />
               <h4>プログラミングチャンネル</h4>
             </div>
             <AddIcon />
+          </div>
+          <div className="sidebarChannelList">
+            <SidebarChannel />
+            <SidebarChannel />
+            <SidebarChannel />
+            <SidebarChannel />
           </div>
         </div>
       </div>

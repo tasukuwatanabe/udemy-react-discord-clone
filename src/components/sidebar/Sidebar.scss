@@ -63,7 +63,8 @@
       }
     }
 
-    .sidebarSettings {
+    // .sidebarSettings {
+    .sidebarFooter {
       position: absolute;
       bottom: 0;
       display: flex;
@@ -86,7 +87,7 @@
         }
 
         .accountName {
-          margin-left: 5px;
+          margin-left: 10px;
 
           h4 {
             color: white;

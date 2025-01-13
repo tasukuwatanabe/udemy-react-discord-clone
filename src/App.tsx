@@ -1,12 +1,12 @@
 import "./App.scss";
-import Home from "./components/home/Home";
+import Chat from "./components/chat/Chat";
 import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   return (
     <div className="App">
       <Sidebar />
-      <Home />
+      <Chat />
     </div>
   );
 }

@@ -1,12 +1,11 @@
-// import { useSelector } from "react-redux";
 import "./App.scss";
+import { useAppSelector } from "./app/hooks";
 import Chat from "./components/chat/Chat";
 import Login from "./components/login/Login";
 import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
-  // const user = useSelector((state) => state.user);
-  const user = null;
+  const user = useAppSelector((state) => state.user);
 
   return (
     <div className="App">

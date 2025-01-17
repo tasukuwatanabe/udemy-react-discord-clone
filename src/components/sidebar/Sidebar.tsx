@@ -5,11 +5,22 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./Sidebar.scss";
 import SidebarChannel from "./SidebarChannel";
-import { auth } from "../../firebase";
+import { auth, db } from "../../firebase";
 import { useAppSelector } from "../../app/hooks";
+import { useEffect } from "react";
+import { collection, query, onSnapshot } from "firebase/firestore";
 
 const Sidebar = () => {
   const user = useAppSelector((state) => state.user);
+
+  const q = query(collection(db, "channels"));
+
+  useEffect(() => {
+    onSnapshot(q, (querySnapshot) => {
+      const channelsResults = [];
+      querySnapshot.docs.forEach((doc) => console.log(doc));
+    });
+  }, []);
 
   return (
     <div className="sidebar">

@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore/lite";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAOZ0QKyF1wdKd5SQUxzXBOd-pQJyn4YyM",
-  authDomain: "udemy-react-discord-clone.firebaseapp.com",
-  projectId: "udemy-react-discord-clone",
-  storageBucket: "udemy-react-discord-clone.firebasestorage.app",
-  messagingSenderId: "45359222448",
-  appId: "1:45359222448:web:b21ea086b3b088ecf7f575",
+  apiKey: import.meta.env.VITE_FB_API_KEY,
+  authDomain: import.meta.env.VITE_FB_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FB_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FB_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FB_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FB_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);

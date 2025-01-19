@@ -1,8 +1,8 @@
-import { Channel } from "./Sidebar";
+import { DocumentData } from "firebase/firestore";
 import "./SidebarChannel.scss";
 
 type Props = {
-  channel: Channel;
+  channel: DocumentData;
 };
 
 const SidebarChannel = (props: Props) => {
@@ -12,7 +12,7 @@ const SidebarChannel = (props: Props) => {
     <div className="sidebarChannel">
       <h4>
         <span className="sidebarChannelHash">#</span>
-        {channel.channel.name}
+        {channel.channel.channelName}
       </h4>
     </div>
   );
